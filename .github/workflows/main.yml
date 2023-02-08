@@ -12,5 +12,6 @@ jobs:
           id: webrequest
           with:
             timeout: 1000000
+            preventFailureOnNoResponse: true
             url: 'https://research.northumbria.ac.uk/irs/'
             method: 'GET'
