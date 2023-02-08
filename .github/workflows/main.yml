@@ -7,19 +7,14 @@ jobs:
     Start:
       runs-on: ubuntu-latest
       steps:
-       # - name: Website request
-       #   uses: fjogeleit/http-request-action@master
-       #   id: webrequest
-       #   with:
-       #     httpsCA: ${{ SECRETS.CERTIFICATE_IRS_WEBSITE}}
-       #     timeout: 1000000
-       #     ignoreStatusCodes: "true"
-       #     preventFailureOnNoResponse: "true"
-       #     url: 'https://research.northumbria.ac.uk/irs/'
-       #     method: 'GET'
-        - name: Website
-          uses: satak/webrequest-action@master
+        - name: Website request
+          uses: fjogeleit/http-request-action@master
+          id: webrequest
           with:
-           url: https://research.northumbria.ac.uk/irs/
-           method: GET
- 
+            httpsCA: ${{ SECRETS.CERTIFICATE_IRS_WEBSITE}}
+            timeout: 1000000
+            ignoreStatusCodes: "true"
+            preventFailureOnNoResponse: "true"
+            url: 'https://research.northumbria.ac.uk/irs/'
+            method: 'GET'
+       
