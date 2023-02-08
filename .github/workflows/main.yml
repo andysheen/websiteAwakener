@@ -17,4 +17,7 @@ jobs:
             preventFailureOnNoResponse: "true"
             url: 'https://research.northumbria.ac.uk/irs/'
             method: 'GET'
+        - name: Show Response
+          run: |
+                echo ${{ steps.webrequest.outputs.response }}
        
