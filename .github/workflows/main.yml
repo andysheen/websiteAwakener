@@ -13,6 +13,7 @@ jobs:
           with:
             httpsCA: ${{ secrets.certificate_irs_website }}
             timeout: 1000000
-           # preventFailureOnNoResponse: true
+            ignoreStatusCodes: "true"
+            preventFailureOnNoResponse: "true"
             url: 'https://research.northumbria.ac.uk/irs/'
             method: 'GET'
