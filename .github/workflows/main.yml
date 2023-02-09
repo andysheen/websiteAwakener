@@ -1,7 +1,7 @@
 name: Website web request
 on:
- # schedule:
-  #  - cron: '0 * * * *'
+  schedule:
+    - cron: '0 * * * *'
   workflow_dispatch:
 jobs:
  build:
@@ -16,7 +16,6 @@ jobs:
       script: |
         import sys
         import subprocess
-        
         subprocess.check_call([sys.executable, '-m', 'pip', 'install','requests'])
         import requests
         import time
